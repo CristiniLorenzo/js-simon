@@ -34,10 +34,10 @@ let timer = document.querySelector('#timer');
 const cronometer = setInterval(function() {
     seconds++;
     timer.innerHTML = seconds;
-    console.log('Timer tick:', seconds);
+   
     if(seconds == 5) {
         clearInterval(cronometer);
-        console.log('Timer stopped at 5 seconds');
+  
         listNumber.innerHTML = "";
         setTimeout(question, 1000);
     }
@@ -47,7 +47,6 @@ const cronometer = setInterval(function() {
 
 // FUNCTIONS
 function question(){
-    console.log('Entering question function');
     
 
     const userNumbers = [];
@@ -57,15 +56,13 @@ function question(){
         userNumbers.push(userImput);
         
     }
-    console.log('User input completed');
-    // controllo che i numeri dell'utente siano uguali a quelli del pc
+       // controllo che i numeri dell'utente siano uguali a quelli del pc
     checkNumbers(userNumbers);
 }
 
 // funzione che controlla i numeri uguali
 function checkNumbers(userNumbers){
-    console.log('Entering checkNumbers function');
-    let correctNumber = 0;
+       let correctNumber = 0;
     for (const num of userNumbers){
         if(pcNumbers.includes(num)){
             correctNumber++;
