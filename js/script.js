@@ -35,7 +35,7 @@ const cronometer = setInterval(function() {
     seconds++;
     timer.innerHTML = seconds;
    
-    if(seconds == 5) {
+    if(seconds == 30) {
         clearInterval(cronometer);
   
         listNumber.innerHTML = "";
